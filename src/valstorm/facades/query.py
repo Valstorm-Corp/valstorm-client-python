@@ -24,7 +24,11 @@ class SyncQueryFacade(SyncBaseFacade):
             **kwargs,
         }
         res = self._transport.request("POST", "query", json=payload)
-        return res.data if isinstance(res.data, list) else []
+        if isinstance(res.data, list):
+            return res.data
+        if isinstance(res.data, dict) and "records" in res.data:
+            return res.data["records"]
+        return []
 
     def graphql(
         self,
@@ -60,7 +64,11 @@ class AsyncQueryFacade(AsyncBaseFacade):
             **kwargs,
         }
         res = await self._transport.request("POST", "query", json=payload)
-        return res.data if isinstance(res.data, list) else []
+        if isinstance(res.data, list):
+            return res.data
+        if isinstance(res.data, dict) and "records" in res.data:
+            return res.data["records"]
+        return []
 
     async def graphql(
         self,

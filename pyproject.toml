@@ -1,6 +1,6 @@
 [project]
 name = "valstorm-client"
-version = "0.1.0"
+version = "0.1.1"
 description = "Official Python Client SDK for Open Valstorm (Async & Sync with 1:1 PlatformContext Parity)"
 readme = "README.md"
 license = "PolyForm-Noncommercial-1.0.0"
