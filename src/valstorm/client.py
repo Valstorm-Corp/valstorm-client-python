@@ -151,6 +151,10 @@ class ValstormClient(BaseValstormClient):
         """Instantiates client automatically using environment variables."""
         return cls(**kwargs)
 
+    @property
+    def transport(self) -> SyncTransport:
+        return self._transport
+
     def close(self) -> None:
         """Closes the underlying HTTP transport."""
         self._transport.close()
@@ -218,6 +222,10 @@ class AsyncValstormClient(BaseValstormClient):
     def from_env(cls, **kwargs: Any) -> "AsyncValstormClient":
         """Instantiates async client automatically using environment variables."""
         return cls(**kwargs)
+
+    @property
+    def transport(self) -> AsyncTransport:
+        return self._transport
 
     async def aclose(self) -> None:
         """Closes the underlying async HTTP transport."""
