@@ -4,6 +4,10 @@ The official Python client library for the **Open Valstorm** platform. Built wit
 
 Provides **1:1 structural interface parity** with the server-side in-process `PlatformContext` (`client.records.*`, `client.query.*`, `client.vfs.*`, `client.schemas.*`, `client.files.*`, `client.apps.*`, `client.sandboxes.*`), enabling unified developer ergonomics across both in-process and remote satellite applications.
 
+- **Official SDK Page & Documentation:** [https://www.valstorm.com/free-tools/valstorm-client-python](https://www.valstorm.com/free-tools/valstorm-client-python?utm_source=github&utm_medium=readme&utm_campaign=valstorm_client_python)
+- **All Valstorm Free & Open-Source Tools:** [https://www.valstorm.com/free-tools](https://www.valstorm.com/free-tools?utm_source=github&utm_medium=readme&utm_campaign=valstorm_client_python)
+- **Valstorm BOS Platform Overview:** [https://www.valstorm.com/bos](https://www.valstorm.com/bos?utm_source=github&utm_medium=readme&utm_campaign=valstorm_client_python)
+
 ---
 
 ## Features
@@ -29,12 +33,12 @@ Provides **1:1 structural interface parity** with the server-side in-process `Pl
 
 Using `uv` (recommended):
 ```bash
-uv add valstorm-client
+uv add "valstorm-client @ git+https://github.com/Valstorm-Corp/valstorm-client-python.git"
 ```
 
 Using `pip`:
 ```bash
-pip install valstorm-client
+pip install "git+https://github.com/Valstorm-Corp/valstorm-client-python.git"
 ```
 
 ---

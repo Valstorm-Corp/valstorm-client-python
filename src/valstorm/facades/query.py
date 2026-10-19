@@ -12,7 +12,7 @@ class SyncQueryFacade(SyncBaseFacade):
         self,
         query: str,
         limit: int | None = None,
-        hydrate: bool = False,
+        hydrate: bool = True,
         bypass_cache: bool = False,
         **kwargs: Any,
     ) -> list[dict[str, Any]]:
@@ -52,7 +52,7 @@ class AsyncQueryFacade(AsyncBaseFacade):
         self,
         query: str,
         limit: int | None = None,
-        hydrate: bool = False,
+        hydrate: bool = True,
         bypass_cache: bool = False,
         **kwargs: Any,
     ) -> list[dict[str, Any]]:
